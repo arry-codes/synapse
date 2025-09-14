@@ -57,7 +57,7 @@ Create a `.env` file in the root directory and add your **Hugging Face API key**
 HUGGINGFACE_API_KEY=your_api_key_here
 ```
 
-### 4. Run the file *app.py* 
+### 4. Run the file app.py
 
 ---
 
@@ -68,11 +68,17 @@ HUGGINGFACE_API_KEY=your_api_key_here
 
 ---
 
-## 📜 Expected Outcomes  
+## 📜 Expected Outcomes 
+
 - Functional proof-of-concept agent  
 - Reasoning + action log visible  
 - Logical resolution of multiple disruption scenarios  
 - Well-documented codebase  
+
+---
+
+<img width="1440" height="900" alt="Screenshot 2025-09-14 at 7 14 21 AM" src="https://github.com/user-attachments/assets/ef29bccd-8f2a-4400-9aba-1329355a3cb0" />
+<img width="1440" height="900" alt="Screenshot 2025-09-14 at 7 14 14 AM" src="https://github.com/user-attachments/assets/711e0422-f743-4fff-88c9-1de5296d5a2c" />
 
 ---
 
