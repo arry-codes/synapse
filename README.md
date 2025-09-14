@@ -59,14 +59,12 @@ HUGGINGFACE_API_KEY=your_api_key_here
 
 ### 4. Run the file app.py
 
----
 
 ## 🚚 Example Use Cases in Grab Ecosystem  
 - **GrabFood / GrabMart:** Handle overloaded restaurants, disputes at doorstep  
 - **GrabExpress:** Manage unavailable recipients & suggest lockers/safe drops  
 - **GrabCar:** Re-route trips in case of sudden traffic jams  
 
----
 
 ## 📜 Expected Outcomes 
 
