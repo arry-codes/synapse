@@ -57,10 +57,7 @@ Create a `.env` file in the root directory and add your **Hugging Face API key**
 HUGGINGFACE_API_KEY=your_api_key_here
 ```
 
-### 4. Run the project  
-```bash
-run the file app.py
-```
+### 4. Run the file *app.py* 
 
 ---
 
