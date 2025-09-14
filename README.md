@@ -1,6 +1,7 @@
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grab_Logo.svg" alt="Grab Logo" width="200"/>
+  <img src="<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/658210a6-f8b3-4cbf-889b-1669410e24bd" />
+" alt="Grab Logo" width="200"/>
 </p>
 
 # Project Synapse 🚀  
