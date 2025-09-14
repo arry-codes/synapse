@@ -23,7 +23,7 @@ An **autonomous AI agent** that goes beyond flagging errors, it also:
 ## ⚙️ Tech Stack  
 - **LLM Backend:** Hugging Face API
 - **Frameworks:** LangChain / LangGraph  
-- **Core Skills:** Prompt Engineering, Agentic Frameworks  
+- **Core Skills:** Flask, Prompt Engineering, Agentic Frameworks  
 - **Frontend:** Deployed with Render  
 
 
