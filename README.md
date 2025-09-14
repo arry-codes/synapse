@@ -8,12 +8,10 @@
 
 🔗 **Live Demo:** [Synapse on Render](https://synapse-rej4.onrender.com/)  
 
----
 
 ## 🌍 Problem  
 Last-mile delivery faces **real-time disruptions** (traffic jams, unavailable merchants, incorrect addresses) that static rule-based systems cannot handle, leading to **delays and inefficiency**.  
 
----
 
 ## 💡 Vision  
 An **autonomous AI agent** that goes beyond flagging errors. It:  
@@ -21,15 +19,13 @@ An **autonomous AI agent** that goes beyond flagging errors. It:
 - **Selects tools** (simulated logistics APIs)  
 - **Formulates multi-step plans** to resolve disruptions in real-time  
 
----
 
 ## ⚙️ Tech Stack  
-- **LLM Backend:** Hugging Face API (instead of OpenAI)  
+- **LLM Backend:** Hugging Face API
 - **Frameworks:** LangChain / LangGraph  
 - **Core Skills:** Prompt Engineering, Agentic Frameworks  
 - **Frontend:** Deployed with Render  
 
----
 
 ## 🔑 Key Features  
 - Accepts disruption scenarios as **natural language input**  
@@ -41,7 +37,6 @@ An **autonomous AI agent** that goes beyond flagging errors. It:
   - `initiate_mediation_flow()`  
   - `suggest_safe_drop_off()`  
 
----
 
 ## 🚀 Quick Start  
 
@@ -53,7 +48,7 @@ cd synapse
 
 ### 2. Install dependencies  
 ```bash
-npm install
+pip install requirements.txt
 ```
 
 ### 3. Set up environment variables  
@@ -64,10 +59,8 @@ HUGGINGFACE_API_KEY=your_api_key_here
 
 ### 4. Run the project  
 ```bash
-npm run dev
+run the file app.py
 ```
-
-The app will now be available at **http://localhost:3000** 🎉  
 
 ---
 
