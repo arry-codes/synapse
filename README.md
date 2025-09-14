@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="200" height="50" alt="image" src="https://github.com/user-attachments/assets/8c9c89f5-d7c0-4da3-891d-29d61f441acb" />
+  <img width="200" height="100" alt="image" src="https://github.com/user-attachments/assets/8c9c89f5-d7c0-4da3-891d-29d61f441acb" />
 </p>
 
 # Project Synapse 🚀  
