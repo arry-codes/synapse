@@ -40,24 +40,24 @@ An **autonomous AI agent** that goes beyond flagging errors, it also:
 
 ## 🚀 Quick Start  
 
-### 1. Clone the repository  
+1. Clone the repository  
 ```bash
 git clone https://github.com/arry-codes/synapse.git
 cd synapse
 ```
 
-### 2. Install dependencies  
+2. Install dependencies  
 ```bash
 pip install requirements.txt
 ```
 
-### 3. Set up environment variables  
+3. Set up environment variables  
 Create a `.env` file in the root directory and add your **Hugging Face API key**:  
 ```env
 HUGGINGFACE_API_KEY=your_api_key_here
 ```
 
-### 4. Run the file app.py
+4. Run the file *app.py*
 
 
 ## 🚚 Example Use Cases in Grab Ecosystem  
