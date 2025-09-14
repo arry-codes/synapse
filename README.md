@@ -4,7 +4,7 @@
 </p>
 
 # Project Synapse 🚀  
-**Agentic Last-Mile Coordinator for GrabHack Hackathon**  
+**Agentic Last-Mile Coordinator** for GrabHack Hackathon 
 
 🔗 **Live Demo :** [https://synapse-rej4.onrender.com]( https://synapse-rej4.onrender.com)
 
