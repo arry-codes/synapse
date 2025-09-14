@@ -1,7 +1,6 @@
 
 <p align="center">
-  <img src="<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/658210a6-f8b3-4cbf-889b-1669410e24bd" />
-" alt="Grab Logo" width="200"/>
+  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Flogos-world.net%2Fgrab-logo%2F&psig=AOvVaw0RjG7Ow6AOZIAdholvMDMH&ust=1757900342234000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCLDn8J2P148DFQAAAAAdAAAAABAE" alt="Grab Logo" width="200"/>
 </p>
 
 # Project Synapse 🚀  
