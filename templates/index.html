@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Synapse 🚀</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Project Synapse 🚀</h1>
+            <h2>Agentic Last-Mile Coordinator</h2>
+        </header>
+        
+        <div class="scenario-input">
+            <h3>Enter a Delivery Disruption Scenario</h3>
+            <textarea id="scenario-text" placeholder="Describe the delivery disruption scenario in natural language. For example: 'My food delivery is late because of heavy rain' or 'The package arrived damaged'"></textarea>
+            <button id="resolve-btn">Resolve Scenario</button>
+        </div>
+        
+        <div class="result-container">
+            <h3>Resolution Process</h3>
+            <div id="loading" class="hidden">
+                <p>Processing scenario... Please wait.</p>
+            </div>
+            <div id="result" class="hidden">
+                <div class="result-section">
+                    <h4>Scenario:</h4>
+                    <p id="scenario-output"></p>
+                </div>
+                
+                <div class="result-section">
+                    <h4>Reasoning:</h4>
+                    <p id="reasoning-output"></p>
+                </div>
+                
+                <div class="result-section">
+                    <h4>Actions Taken:</h4>
+                    <div id="steps-output"></div>
+                </div>
+                
+                <div class="result-section">
+                    <h4>Final Resolution:</h4>
+                    <p id="resolution-output"></p>
+                </div>
+            </div>
+            
+            <div id="error" class="hidden">
+                <p class="error-message">An error occurred while processing the scenario.</p>
+            </div>
+        </div>
+        
+        <div class="sample-scenarios">
+            <h3>Sample Scenarios</h3>
+            <div class="sample-buttons">
+                <button class="sample-btn" data-scenario="Overloaded Restaurant: An order is placed at Burger King, but the kitchen is experiencing a 40-minute delay.">Overloaded Restaurant</button>
+                <button class="sample-btn" data-scenario="Damaged Packaging: A spilled drink dispute at the customer's doorstep. It's unclear if the merchant or driver is at fault.">Damaged Packaging</button>
+                <button class="sample-btn" data-scenario="Recipient Unavailable: A delivery partner arrives at the destination, but the recipient is not available to receive a valuable package.">Recipient Unavailable</button>
+                <button class="sample-btn" data-scenario="Traffic Obstruction: A passenger is on an urgent trip to the airport. There's a major accident along the planned route.">Traffic Obstruction</button>
+                <button class="sample-btn" data-scenario="Wrong Address: The driver went to 123 Main Street but the customer is at 123 Main Avenue.">Wrong Address</button>
+                <button class="sample-btn" data-scenario="Payment Issue: The customer was charged twice for their order and wants a refund.">Payment Issue</button>
+                <button class="sample-btn" data-scenario="Weather Delay: Heavy rain is causing delays for all deliveries in the downtown area.">Weather Delay</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const resolveBtn = document.getElementById('resolve-btn');
+            const scenarioText = document.getElementById('scenario-text');
+            const loading = document.getElementById('loading');
+            const result = document.getElementById('result');
+            const error = document.getElementById('error');
+            const scenarioOutput = document.getElementById('scenario-output');
+            const reasoningOutput = document.getElementById('reasoning-output');
+            const stepsOutput = document.getElementById('steps-output');
+            const resolutionOutput = document.getElementById('resolution-output');
+            const sampleButtons = document.querySelectorAll('.sample-btn');
+            
+            // Sample scenario buttons
+            sampleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    scenarioText.value = this.getAttribute('data-scenario');
+                });
+            });
+            
+            // Resolve button click handler
+            resolveBtn.addEventListener('click', function() {
+                const scenario = scenarioText.value.trim();
+                
+                if (!scenario) {
+                    alert('Please enter a scenario');
+                    return;
+                }
+                
+                // Show loading, hide results and error
+                loading.classList.remove('hidden');
+                result.classList.add('hidden');
+                error.classList.add('hidden');
+                
+                // Send request to server
+                fetch('/resolve', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ scenario: scenario })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    loading.classList.add('hidden');
+                    
+                    if (data.error) {
+                        error.classList.remove('hidden');
+                        error.querySelector('.error-message').textContent = data.error;
+                    } else {
+                        // Display results
+                        scenarioOutput.textContent = data.scenario;
+                        reasoningOutput.textContent = data.reasoning;
+                        
+                        // Format steps
+                        stepsOutput.innerHTML = '';
+                        if (data.steps && data.steps.length > 0) {
+                            const ol = document.createElement('ol');
+                            data.steps.forEach(step => {
+                                const li = document.createElement('li');
+                                li.innerHTML = `<strong>${step.action}</strong><br>${step.observation}`;
+                                ol.appendChild(li);
+                            });
+                            stepsOutput.appendChild(ol);
+                        } else {
+                            stepsOutput.textContent = 'No actions were taken.';
+                        }
+                        
+                        resolutionOutput.textContent = data.resolution;
+                        result.classList.remove('hidden');
+                    }
+                })
+                .catch(err => {
+                    loading.classList.add('hidden');
+                    error.classList.remove('hidden');
+                    error.querySelector('.error-message').textContent = 'An error occurred: ' + err.message;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
