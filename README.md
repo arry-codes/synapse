@@ -14,7 +14,7 @@ Last-mile delivery faces **real-time disruptions** (traffic jams, unavailable me
 
 
 ## 💡 Vision  
-An **autonomous AI agent** that goes beyond flagging errors. It:  
+An **autonomous AI agent** that goes beyond flagging errors, it also:  
 - **Reasons** about the situation  
 - **Selects tools** (simulated logistics APIs)  
 - **Formulates multi-step plans** to resolve disruptions in real-time  
