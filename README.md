@@ -78,9 +78,6 @@ HUGGINGFACE_API_KEY=your_api_key_here
 - Kavish Bishnoi - [@kavish1919](https://github.com/kavish1919)
 - Mayank Agarwal – [#](https://github.com/arry-codes)  
 
-(Add other teammates here with GitHub/LinkedIn links)  
-
-
 ---
 
 <img width="1440" height="900" alt="Screenshot 2025-09-14 at 7 14 21 AM" src="https://github.com/user-attachments/assets/ef29bccd-8f2a-4400-9aba-1329355a3cb0" />
