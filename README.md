@@ -85,4 +85,4 @@ HUGGINGFACE_API_KEY=your_api_key_here
 
 ---
 
-<p align="center"> 👨‍💻 Built with ❤️ for *GrabHack Hackathon* </p>
+<div align="center"> 👨‍💻 Built with ❤️ for GrabHack Hackathon </div>
